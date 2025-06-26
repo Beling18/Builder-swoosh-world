@@ -144,22 +144,22 @@ export default function Index() {
               {/* Partner Logos */}
               <div className="flex items-center gap-8 pt-8">
                 <div className="flex items-center gap-2 text-gray-600">
-                  <div className="w-8 h-8 bg-teal-100 rounded-lg flex items-center justify-center">
-                    <div className="w-4 h-4 bg-teal-600 rounded"></div>
+                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Mountain className="w-4 h-4 text-blue-600" />
                   </div>
-                  <span className="font-medium">Lightbox</span>
+                  <span className="font-medium">TrekGear</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
-                  <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <div className="w-4 h-4 bg-gray-600 rounded-full"></div>
+                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                    <Route className="w-4 h-4 text-green-600" />
                   </div>
-                  <span className="font-medium">Spherulo</span>
+                  <span className="font-medium">AdventureKits</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
-                  <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center">
-                    <div className="w-4 h-4 bg-yellow-600 rounded-sm"></div>
+                  <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <Tent className="w-4 h-4 text-orange-600" />
                   </div>
-                  <span className="font-medium">Nietzsche</span>
+                  <span className="font-medium">CampPro</span>
                 </div>
               </div>
             </div>
