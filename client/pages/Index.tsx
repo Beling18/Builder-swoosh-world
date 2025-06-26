@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
-  Search,
-  ShoppingCart,
   ArrowRight,
   MapPin,
   Eye,
@@ -14,7 +11,12 @@ import {
   BookOpen,
   Navigation,
   MessageCircle,
+  Menu,
+  X,
+  Heart,
+  Calendar,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function Index() {
   return (
