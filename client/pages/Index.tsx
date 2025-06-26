@@ -168,8 +168,8 @@ export default function Index() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fad0f625215544e1eb2bce2836c58c55a%2F3f361bf3460447fe86b48e84ea465215?format=webp&width=800"
-                  alt="Mountain hiking adventure scene"
+                  src="https://images.pexels.com/photos/2348108/pexels-photo-2348108.jpeg"
+                  alt="White water rafting adventure scene"
                   className="w-full h-[500px] lg:h-[600px] object-cover"
                 />
 
