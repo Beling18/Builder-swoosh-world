@@ -19,10 +19,12 @@ import {
 import { useState } from "react";
 
 export default function Index() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header/Navigation */}
-      <header className="w-full px-6 py-4 border-b border-gray-100">
+      <header className="w-full px-4 sm:px-6 py-4 border-b border-gray-100">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
@@ -32,23 +34,64 @@ export default function Index() {
             <span className="text-xl font-bold text-gray-900">Thrilliz</span>
           </div>
 
-          {/* Search Bar */}
-          <div className="flex-1 max-w-md mx-8">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-              <Input
-                placeholder="What are you looking for?"
-                className="pl-10 pr-4 py-2 w-full rounded-lg border border-gray-200"
-              />
-            </div>
-          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-8 text-sm">
+            <a
+              href="#"
+              className="text-gray-900 hover:text-teal-600 transition-colors font-medium"
+            >
+              Home
+            </a>
+            <a
+              href="#"
+              className="text-gray-600 hover:text-teal-600 transition-colors"
+            >
+              Rental
+            </a>
+            <a
+              href="#"
+              className="text-gray-600 hover:text-teal-600 transition-colors"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="text-gray-600 hover:text-teal-600 transition-colors"
+            >
+              Contact
+            </a>
+          </nav>
 
-          {/* Navigation & Cart */}
-          <div className="flex items-center gap-6">
-            <nav className="hidden md:flex items-center gap-6 text-sm">
+          {/* Desktop Booking Button & Mobile Menu */}
+          <div className="flex items-center gap-4">
+            <Button className="hidden sm:inline-flex bg-teal-600 hover:bg-teal-700 text-white px-6">
+              <Calendar className="w-4 h-4 mr-2" />
+              Book Now
+            </Button>
+
+            {/* Mobile Menu Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="lg:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-gray-100">
+            <nav className="flex flex-col gap-4 mt-4">
               <a
                 href="#"
-                className="text-gray-600 hover:text-teal-600 transition-colors"
+                className="text-gray-900 hover:text-teal-600 transition-colors font-medium"
               >
                 Home
               </a>
@@ -70,15 +113,13 @@ export default function Index() {
               >
                 Contact
               </a>
+              <Button className="sm:hidden bg-teal-600 hover:bg-teal-700 text-white w-full mt-2">
+                <Calendar className="w-4 h-4 mr-2" />
+                Book Now
+              </Button>
             </nav>
-            <Button variant="ghost" size="icon" className="relative">
-              <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-4 h-4 bg-teal-600 text-white text-xs rounded-full flex items-center justify-center">
-                2
-              </span>
-            </Button>
           </div>
-        </div>
+        )}
       </header>
 
       {/* Hero Section */}
